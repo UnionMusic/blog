@@ -1,0 +1,12 @@
+app: blog-lianheart
+stage: prod
+component: cos
+name: cos
+
+inputs:
+  src: ./dist
+  targetDir: /
+  bucket: ${app}-${name}
+  region: ap-shanghai
+  protocol: http
+  replace: true
