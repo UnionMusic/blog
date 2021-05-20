@@ -1,0 +1,52 @@
+name: 'Lighthouse'
+on: # rebuild any PRs and main branch changes
+  pull_request:
+    paths:
+      - '.github/workflows/lighthouse.yml'
+      - 'src/**'
+      - '.eslint*'
+      - '*.html'
+      - '*.json'
+      - '*.js'
+      - 'serverless.yml'
+      - '!package.json'
+      - '!yarn.lock'
+
+jobs:
+  lighthouse-check:
+    name: 'Lighthouse'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ '14' ]
+    steps:
+      - uses: actions/checkout@v2.3.4
+        with:
+          fetch-depth: 1
+          ref: ${{ github.head_ref }}
+
+      - run: yarn --frozen-lockfile
+        env:
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
+          HUSKY_SKIP_INSTALL: true
+
+      - name: Sleep for 30 seconds
+        uses: whatnick/wait-action@master
+        with:
+          time: '30s'
+
+      - name: Run Lighthouse
+        uses: foo-software/lighthouse-check-action@master
+        id: lighthouseCheck
+        with:
+          urls: 'https://deploy-preview-${{github.event.number}}--blog-lianhe-art.netlify.app'
+
+      - name: Handle Lighthouse Check results
+        uses: foo-software/lighthouse-check-status-action@master
+        with:
+          lighthouseCheckResults: ${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}
+          minAccessibilityScore: "50"
+          minBestPracticesScore: "50"
+          minPerformanceScore: "50"
+          minProgressiveWebAppScore: "50"
+          minSeoScore: "50"

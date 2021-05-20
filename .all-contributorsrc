@@ -1,0 +1,47 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "ygnice",
+      "name": "ygnice",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47884245?v=4",
+      "profile": "https://github.com/ygnice",
+      "contributions": [
+        "code",
+        "design",
+        "ideas"
+      ]
+    },
+    {
+      "login": "Teakowa",
+      "name": "Teakowa Gatanothor O'deorain",
+      "avatar_url": "https://avatars.githubusercontent.com/u/27560638?v=4",
+      "profile": "https://teakowa.me",
+      "contributions": [
+        "infra",
+        "projectManagement",
+        "review"
+      ]
+    },
+    {
+      "login": "LemomZhang",
+      "name": "lemom",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38024395?v=4",
+      "profile": "https://github.com/LemomZhang",
+      "contributions": [
+        "code",
+        "maintenance"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "lianhe.art",
+  "projectOwner": "UnionMusic",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

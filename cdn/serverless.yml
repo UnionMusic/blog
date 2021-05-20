@@ -1,0 +1,17 @@
+app: blog-lianheart
+stage: prod
+component: cdn
+name: cdn
+
+inputs:
+  area: mainland
+  domain: blog.lianhe.art
+  origin:
+    origins:
+      - ${output:${stage}:${app}:cos.cosOrigin}
+    originType: cos
+    originPullProtocol: http
+  onlyRefresh: true
+  refreshCdn:
+    urls:
+      - https://blog.lianhe.art/
