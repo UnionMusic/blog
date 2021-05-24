@@ -10,7 +10,8 @@
     "export": "next export -o dist",
     "build-prod": "run-s clean build export",
     "clean": "rimraf .next dist",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx ."
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx . --quiet --fix",
+    "lint:style": "npx stylelint 'src/**/**.{css,scss}' --fix"
   },
   "dependencies": {
     "@mapbox/rehype-prism": "^0.6.0",
