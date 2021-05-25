@@ -64,7 +64,7 @@ jobs:
         run: yarn build-prod
 
       - name: Setup Serverless
-        uses: teakowa/setup-serverless@v1.1.2
+        uses: teakowa/setup-serverless@v2
         with:
           provider: tencent
         env:
@@ -151,7 +151,7 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Setup Serverless
-        uses: teakowa/setup-serverless@v1.1.2
+        uses: teakowa/setup-serverless@v2
         with:
           provider: tencent
         env:
