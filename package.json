@@ -14,7 +14,7 @@
     "lint:style": "npx stylelint 'src/**/**.{css,scss}' --fix"
   },
   "dependencies": {
-    "@mapbox/rehype-prism": "^0.6.0",
+    "@mapbox/rehype-prism": "^0.7.0",
     "date-fns": "^2.22.1",
     "gray-matter": "^4.0.3",
     "next": "^10.2.3",
