@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@mapbox/rehype-prism": "^0.7.0",
-    "date-fns": "^2.22.1",
+    "date-fns": "^2.23.0",
     "gray-matter": "^4.0.3",
     "next": "^10.2.3",
     "next-seo": "^4.26.0",
