@@ -22,11 +22,11 @@ jobs:
 
       - name: Checkout Latest Stable Version
         if: ${{ github.event.inputs.version }} == 'latest'
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v2.3.5
 
       - name: Checkout ${{ github.event.inputs.version }}
         if: github.event.inputs.version != 'latest'
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v2.3.5
         with:
           ref: ${{ github.event.inputs.version }}
 
@@ -137,11 +137,11 @@ jobs:
     steps:
       - name: Checkout Latest Stable Version
         if: ${{ github.event.inputs.version }} == 'latest'
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v2.3.5
 
       - name: Checkout ${{ github.event.inputs.version }}
         if: github.event.inputs.version != 'latest'
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v2.3.5
         with:
           ref: ${{ github.event.inputs.version }}
 
