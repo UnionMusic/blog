@@ -26,7 +26,7 @@
     "remark-parse": "^9.0.0",
     "remark-rehype": "^8.1.0",
     "styled-jsx-plugin-postcss": "^4.0.1",
-    "unified": "^9.2.1"
+    "unified": "^10.1.1"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^11.0.1",
